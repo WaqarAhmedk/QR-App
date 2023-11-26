@@ -37,7 +37,7 @@ export const signup = createAsyncThunk(
       const response = await axiosInstance.post('/auth/register', payload);
       // localStorage.setItem("token", response?.token?.accessToken);
       // localStorage.setItem("refreshToken", response?.token?.refreshToken);
-      toast.success('Verification Email sent!');
+      toast.success('Verification Email sent !');
       return response;
     } catch (err) {
       err.data.errors.map((error, index) => {
